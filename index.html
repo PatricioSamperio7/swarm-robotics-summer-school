@@ -20,7 +20,7 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; background-color: var(--cream); color: var(--text-dark); line-height: 1.6; }
 
-        /* Navigation */
+        /* Navigation con Logos Corregidos */
         nav {
             position: fixed; top: 0; width: 100%; padding: 0.8rem 5%;
             display: flex; justify-content: space-between; align-items: center;
@@ -28,16 +28,18 @@
             border-bottom: 1px solid rgba(0,0,0,0.1);
         }
         .nav-brand { display: flex; align-items: center; gap: 1.5rem; }
-        .nav-brand img { height: 45px; width: auto; }
+        /* Nombres de archivos basados en tu captura */
+        .nav-brand img { height: 45px; width: auto; object-fit: contain; }
+
         .nav-links a {
             text-decoration: none; color: var(--text-dark); margin-left: 1.5rem;
             font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
         }
 
-        /* Hero */
+        /* Hero Section con SWARM.png */
         .hero {
             height: 100vh; display: flex; align-items: center; justify-content: center;
-            text-align: center; background: url('./swarm.PNG') center/cover no-repeat;
+            text-align: center; background: url('SWARM.png') center/cover no-repeat;
             position: relative; color: white;
         }
         .hero-overlay {
@@ -47,42 +49,41 @@
         .hero-content { position: relative; z-index: 2; max-width: 1000px; padding: 0 20px; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 1rem; }
         .hero p { font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+
         .btn-apply {
             padding: 1.2rem 3rem; background: var(--wine-red); color: white;
             text-decoration: none; font-weight: 700; text-transform: uppercase;
-            transition: var(--transition); display: inline-block;
+            transition: var(--transition); display: inline-block; border-radius: 2px;
         }
-        .btn-apply:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .btn-apply:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); background: #7a121c; }
 
-        /* General Sections */
+        /* Sections */
         section { padding: 100px 10%; }
         h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 3rem; color: var(--deep-purple); border-left: 5px solid var(--wine-red); padding-left: 20px; }
 
-        /* Program Grid */
-        .program-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-        .info-card { background: white; padding: 2rem; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .info-card h4 { color: var(--wine-red); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 0.5rem; }
+        .program-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+        .info-card { background: white; padding: 1.5rem; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .info-card h4 { color: var(--wine-red); text-transform: uppercase; font-size: 0.75rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
 
         /* Syllabus Layout */
         .syllabus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-        .module-box { margin-bottom: 2rem; }
-        .module-box h3 { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; color: var(--wine-red); margin-bottom: 1rem; }
+        .module-box { margin-bottom: 2.5rem; }
+        .module-box h3 { font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--wine-red); margin-bottom: 1rem; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
         .syllabus-list { list-style: none; }
-        .syllabus-list li { padding: 0.5rem 0; border-bottom: 1px solid #eee; font-size: 0.9rem; display: flex; gap: 10px; }
+        .syllabus-list li { padding: 0.4rem 0; font-size: 0.9rem; display: flex; gap: 10px; color: #444; }
         .syllabus-list li::before { content: "▹"; color: var(--wine-red); font-weight: bold; }
 
-        /* Venue Section */
-        .venue-container { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: white; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .venue-img { width: 100%; height: 100%; min-height: 400px; background: url('./FIME.PNG') center/cover no-repeat; }
+        /* Venue con FIME.png */
+        .venue-container { display: grid; grid-template-columns: 1fr 1fr; background: white; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .venue-img { background: url('FIME.png') center/cover no-repeat; min-height: 400px; }
         .venue-details { padding: 4rem; display: flex; flex-direction: column; justify-content: center; }
 
         footer { background: var(--deep-purple); color: white; padding: 60px 10% 30px; text-align: center; }
-        .footer-logo { margin-bottom: 2rem; opacity: 0.8; }
-        .footer-email { font-family: 'JetBrains Mono', monospace; color: var(--cream); font-size: 1.5rem; text-decoration: none; }
+        .footer-email { font-family: 'JetBrains Mono', monospace; color: var(--cream); font-size: 1.5rem; text-decoration: none; transition: 0.3s; }
+        .footer-email:hover { color: var(--wine-red); }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .syllabus-grid, .venue-container { grid-template-columns: 1fr; }
-            section { padding: 60px 5%; }
             .nav-links { display: none; }
         }
     </style>
@@ -91,11 +92,11 @@
 
     <nav>
         <div class="nav-brand">
-            <img src="./logo_ras.JPG" alt="IEEE RAS">
-            <img src="./logo_sb.PNG" alt="IEEE UANL">
+            <img src="LOGO%20RAS.jpg" alt="IEEE RAS Logo">
+            <img src="LOGO%20SB.png" alt="IEEE SB UANL Logo">
         </div>
         <div class="nav-links">
-            <a href="#about">Overview</a>
+            <a href="#about">Program</a>
             <a href="#syllabus">Syllabus</a>
             <a href="#venue">Venue</a>
             <a href="mailto:ieee.ras.uanl@gmail.com">Contact</a>
@@ -105,70 +106,63 @@
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p style="text-transform: uppercase; letter-spacing: 4px;">Universidad Autónoma de Nuevo León</p>
-            <h1>Swarm Intelligence Summer School 2026</h1>
-            <p>Cooperative Robotics Systems with ROS 2 | Practitioner TEP Track</p>
-            <p style="font-size: 0.9rem;">Facultad de Ingeniería Mecánica y Eléctrica (FIME)</p>
+            <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 600;">Universidad Autónoma de Nuevo León</p>
+            <h1>Swarm Robotics Summer School 2026</h1>
+            <p>Design and Implementation of Distributed Robotics Swarms using ROS 2</p>
+            <p style="font-size: 0.9rem; letter-spacing: 1px;">FACULTAD DE INGENIERÍA MECÁNICA Y ELÉCTRICA</p>
             <a href="mailto:ieee.ras.uanl@gmail.com" class="btn-apply">Apply Soon</a>
         </div>
     </header>
 
     <section id="about">
-        <h2>Program Overview</h2>
+        <h2>Practitioner Track (TEP)</h2>
         <div class="program-info">
-            <div class="info-card">
-                <h4>Duration</h4>
-                <p>2 Weeks (10 Business Days)</p>
-            </div>
-            <div class="info-card">
-                <h4>Format</h4>
-                <p>Hybrid (Theory + Applied Project)</p>
-            </div>
-            <div class="info-card">
-                <h4>Total Hours</h4>
-                <p>25 Hours Intensive (12.5h/week)</p>
-            </div>
-            <div class="info-card">
-                <h4>Tech Stack</h4>
-                <p>C++ and ROS 2 Framework</p>
-            </div>
+            <div class="info-card"><h4>Duration</h4><p>2 Weeks (10 Days)</p></div>
+            <div class="info-card"><h4>Format</h4><p>Hybrid Learning</p></div>
+            <div class="info-card"><h4>Commitment</h4><p>25 Total Hours</p></div>
+            <div class="info-card"><h4>Language</h4><p>C++ / ROS 2</p></div>
         </div>
-        <p style="max-width: 800px; font-size: 1.1rem; color: #444;">
-            This course focuses on robotic swarms, distributed systems, robot-to-robot communication, IoT integration, and Edge Computing using scalable architectures.
-        </p>
+        <div style="max-width: 850px;">
+            <p style="font-size: 1.1rem; color: #444; margin-bottom: 2rem;">
+                An intensive technical program focused on collective emergent behavior, distributed control, and real-world deployment of robotic swarms. From industrial inspection to cooperative logistics.
+            </p>
+        </div>
     </section>
 
-    <section id="syllabus" style="background: #f0ede9;">
-        <h2>Technical Syllabus</h2>
+    <section id="syllabus" style="background: #f4f1ee;">
+        <h2>Course Syllabus</h2>
         <div class="syllabus-grid">
             <div>
                 <div class="module-box">
                     <h3>Week 1: Intensive Technical Training</h3>
+                    <p style="font-weight: 700; font-size: 0.8rem; color: var(--wine-red); margin-bottom: 10px;">MODULES 1-5</p>
                     <ul class="syllabus-list">
                         <li>Introduction to Swarm Robotics & Complex Systems</li>
-                        <li>Multi-robot vs. Robotic Swarms differences</li>
-                        <li>Self-organization principles and distributed control</li>
-                        <li>Advanced ROS 2: Nodes, Topics, Services, and Actions</li>
-                        <li>Namespaces and scalability for multi-robot fleets</li>
-                        <li>Robot-to-robot communication in distributed environments</li>
-                        <li>DDS & Quality of Service (QoS) Configuration</li>
-                        <li>IoT and Edge Computing for Swarm Intelligence</li>
-                        <li>Hardware Architecture for Cooperative Agents</li>
-                        <li>C++ Implementation of Swarm Behaviors</li>
+                        <li>Self-organization principles & Emergent Behavior</li>
+                        <li>Advanced ROS 2 Distributed Architectures</li>
+                        <li>Multi-robot Namespaces and Scalability</li>
+                        <li>DDS, Quality of Service (QoS) & Latency Control</li>
+                        <li>Robot-to-Robot (R2R) Communication Protocols</li>
+                        <li>IoT & Edge Computing for Robotic Swarms</li>
+                        <li>Embedded Systems & Hardware Integration with ROS 2</li>
+                        <li>Cooperative Control Algorithms & Local Rules</li>
+                        <li>Analysis of Distributed Decision Making</li>
                     </ul>
                 </div>
             </div>
             <div>
                 <div class="module-box">
-                    <h3>Week 2: Applied Engineering Project</h3>
-                    <p style="margin-bottom: 1rem; font-weight: bold;">Real-world Problem Solving Tracks:</p>
+                    <h3>Week 2: Applied Project Development</h3>
+                    <p style="font-weight: 700; font-size: 0.8rem; color: var(--wine-red); margin-bottom: 10px;">CHALLENGE TRACKS</p>
                     <ul class="syllabus-list">
-                        <li>Track A: Cooperative Industrial Infrastructure Inspection</li>
-                        <li>Track B: Cooperative Light Load Transport Coordination</li>
-                        <li>Track C: Swarm Mapping (Distributed Exploration)</li>
-                        <li>Track D: Mobile IoT Distributed Monitoring (Edge Nodes)</li>
-                        <li>Full System Implementation, Debugging, and Validation</li>
-                        <li>Technical Documentation and Final Swarm Demonstration</li>
+                        <li><strong>Track 1:</strong> Cooperative Industrial Infrastructure Inspection</li>
+                        <li><strong>Track 2:</strong> Cooperative Transport of Light Loads</li>
+                        <li><strong>Track 3:</strong> Distributed Exploration & Swarm Mapping</li>
+                        <li><strong>Track 4:</strong> Distributed IoT Environmental Monitoring</li>
+                        <li>System Design & Technical Planning</li>
+                        <li>Distributed Swarm Behavior Implementation</li>
+                        <li>Testing, Debugging & Behavior Validation</li>
+                        <li>Final Demonstration & Technical Presentation</li>
                     </ul>
                 </div>
             </div>
@@ -180,25 +174,21 @@
             <div class="venue-img"></div>
             <div class="venue-details">
                 <h2>The Venue</h2>
-                <p style="margin-bottom: 1rem;"><strong>Facultad de Ingeniería Mecánica y Eléctrica (FIME)</strong></p>
+                <p style="margin-bottom: 1rem;"><strong>Faculty of Mechanical and Electrical Engineering (FIME)</strong></p>
                 <p>Universidad Autónoma de Nuevo León (UANL)</p>
-                <p>Monterrey, Mexico.</p>
-                <p style="margin-top: 2rem; color: #666; font-size: 0.9rem;">
-                    Located in the industrial heart of Mexico, FIME provides state-of-the-art laboratories and the ideal technical ecosystem for robotics development.
+                <p>Monterrey, Nuevo León, Mexico.</p>
+                <p style="margin-top: 2rem; color: #666; font-size: 0.9rem; border-top: 1px solid #ddd; padding-top: 20px;">
+                    State-of-the-art laboratories and the ideal technical ecosystem for robotics research and development in northern Mexico.
                 </p>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <div class="footer-logo">
-            <img src="./logo_ras.JPG" alt="" style="height: 40px; margin: 0 10px;">
-            <img src="./logo_sb.PNG" alt="" style="height: 40px; margin: 0 10px;">
-        </div>
-        <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1rem;">Inquiries and Applications</p>
+    <footer>
+        <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1rem; opacity: 0.7;">Contact & Inquiries</p>
         <a href="mailto:ieee.ras.uanl@gmail.com" class="footer-email">ieee.ras.uanl@gmail.com</a>
         <div style="margin-top: 3rem; font-size: 0.7rem; opacity: 0.5;">
-            IEEE Robotics & Automation Society Student Branch UANL | 2026
+            IEEE Robotics & Automation Society Student Branch UANL | FIME | 2026
         </div>
     </footer>
 
