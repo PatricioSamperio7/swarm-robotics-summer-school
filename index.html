@@ -20,7 +20,7 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; background-color: var(--cream); color: var(--text-dark); line-height: 1.6; }
 
-        /* Navigation con Logos Corregidos */
+        /* Navigation */
         nav {
             position: fixed; top: 0; width: 100%; padding: 0.8rem 5%;
             display: flex; justify-content: space-between; align-items: center;
@@ -28,7 +28,6 @@
             border-bottom: 1px solid rgba(0,0,0,0.1);
         }
         .nav-brand { display: flex; align-items: center; gap: 1.5rem; }
-        /* Nombres de archivos basados en tu captura */
         .nav-brand img { height: 45px; width: auto; object-fit: contain; }
 
         .nav-links a {
@@ -36,7 +35,7 @@
             font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
         }
 
-        /* Hero Section con SWARM.png */
+        /* Hero Section */
         .hero {
             height: 100vh; display: flex; align-items: center; justify-content: center;
             text-align: center; background: url('SWARM.png') center/cover no-repeat;
@@ -51,13 +50,14 @@
         .hero p { font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
 
         .btn-apply {
-            padding: 1.2rem 3rem; background: var(--wine-red); color: white;
+            padding: 1.2rem 3.5rem; background: var(--wine-red); color: white;
             text-decoration: none; font-weight: 700; text-transform: uppercase;
             transition: var(--transition); display: inline-block; border-radius: 2px;
+            letter-spacing: 1px;
         }
         .btn-apply:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); background: #7a121c; }
 
-        /* Sections */
+        /* General Sections */
         section { padding: 100px 10%; }
         h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 3rem; color: var(--deep-purple); border-left: 5px solid var(--wine-red); padding-left: 20px; }
 
@@ -73,13 +73,14 @@
         .syllabus-list li { padding: 0.4rem 0; font-size: 0.9rem; display: flex; gap: 10px; color: #444; }
         .syllabus-list li::before { content: "▹"; color: var(--wine-red); font-weight: bold; }
 
-        /* Venue con FIME.png */
+        /* Venue Section */
         .venue-container { display: grid; grid-template-columns: 1fr 1fr; background: white; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
         .venue-img { background: url('FIME.png') center/cover no-repeat; min-height: 400px; }
         .venue-details { padding: 4rem; display: flex; flex-direction: column; justify-content: center; }
 
-        footer { background: var(--deep-purple); color: white; padding: 60px 10% 30px; text-align: center; }
-        .footer-email { font-family: 'JetBrains Mono', monospace; color: var(--cream); font-size: 1.5rem; text-decoration: none; transition: 0.3s; }
+        /* Footer */
+        footer { background: var(--deep-purple); color: white; padding: 80px 10% 40px; text-align: center; }
+        .footer-email { font-family: 'JetBrains Mono', monospace; color: var(--cream); font-size: 1.5rem; text-decoration: none; transition: 0.3s; display: block; margin-top: 1rem; }
         .footer-email:hover { color: var(--wine-red); }
 
         @media (max-width: 900px) {
@@ -110,7 +111,7 @@
             <h1>Swarm Robotics Summer School 2026</h1>
             <p>Design and Implementation of Distributed Robotics Swarms using ROS 2</p>
             <p style="font-size: 0.9rem; letter-spacing: 1px;">FACULTAD DE INGENIERÍA MECÁNICA Y ELÉCTRICA</p>
-            <a href="mailto:ieee.ras.uanl@gmail.com" class="btn-apply">Apply Soon</a>
+            <a href="https://forms.gle/TU_ENLACE_DE_GOOGLE_FORMS" target="_blank" class="btn-apply">Apply Soon</a>
         </div>
     </header>
 
@@ -124,18 +125,18 @@
         </div>
         <div style="max-width: 850px;">
             <p style="font-size: 1.1rem; color: #444; margin-bottom: 2rem;">
-                An intensive technical program focused on collective emergent behavior, distributed control, and real-world deployment of robotic swarms. From industrial inspection to cooperative logistics.
+                This intensive academic program focuses on the transition from individual robotic autonomy to collective emergent behavior. 
+                Participants will master the engineering execution of large-scale distributed systems using ROS 2 as the primary framework.
             </p>
         </div>
     </section>
 
     <section id="syllabus" style="background: #f4f1ee;">
-        <h2>Course Syllabus</h2>
+        <h2>Technical Syllabus</h2>
         <div class="syllabus-grid">
             <div>
                 <div class="module-box">
                     <h3>Week 1: Intensive Technical Training</h3>
-                    <p style="font-weight: 700; font-size: 0.8rem; color: var(--wine-red); margin-bottom: 10px;">MODULES 1-5</p>
                     <ul class="syllabus-list">
                         <li>Introduction to Swarm Robotics & Complex Systems</li>
                         <li>Self-organization principles & Emergent Behavior</li>
@@ -152,14 +153,14 @@
             </div>
             <div>
                 <div class="module-box">
-                    <h3>Week 2: Applied Project Development</h3>
-                    <p style="font-weight: 700; font-size: 0.8rem; color: var(--wine-red); margin-bottom: 10px;">CHALLENGE TRACKS</p>
+                    <h3>Week 2: Applied Engineering Project</h3>
+                    <p style="font-weight: 700; font-size: 0.8rem; color: var(--wine-red); margin-bottom: 10px;">CAPSTONE CHALLENGES</p>
                     <ul class="syllabus-list">
-                        <li><strong>Track 1:</strong> Cooperative Industrial Infrastructure Inspection</li>
-                        <li><strong>Track 2:</strong> Cooperative Transport of Light Loads</li>
-                        <li><strong>Track 3:</strong> Distributed Exploration & Swarm Mapping</li>
-                        <li><strong>Track 4:</strong> Distributed IoT Environmental Monitoring</li>
-                        <li>System Design & Technical Planning</li>
+                        <li>Cooperative Industrial Infrastructure Inspection</li>
+                        <li>Collaborative Light Load Transport Coordination</li>
+                        <li>Distributed Exploration & Swarm Mapping</li>
+                        <li>Mobile IoT Environmental Monitoring (Edge Nodes)</li>
+                        <li>System Design & Technical Planning Phase</li>
                         <li>Distributed Swarm Behavior Implementation</li>
                         <li>Testing, Debugging & Behavior Validation</li>
                         <li>Final Demonstration & Technical Presentation</li>
@@ -176,16 +177,16 @@
                 <h2>The Venue</h2>
                 <p style="margin-bottom: 1rem;"><strong>Faculty of Mechanical and Electrical Engineering (FIME)</strong></p>
                 <p>Universidad Autónoma de Nuevo León (UANL)</p>
-                <p>Monterrey, Nuevo León, Mexico.</p>
+                <p>San Nicolás de los Garza, Nuevo León, Mexico.</p>
                 <p style="margin-top: 2rem; color: #666; font-size: 0.9rem; border-top: 1px solid #ddd; padding-top: 20px;">
-                    State-of-the-art laboratories and the ideal technical ecosystem for robotics research and development in northern Mexico.
+                    State-of-the-art laboratories and the ideal technical ecosystem for advanced robotics research.
                 </p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1rem; opacity: 0.7;">Contact & Inquiries</p>
+        <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; opacity: 0.7;">Contact & Inquiries</p>
         <a href="mailto:ieee.ras.uanl@gmail.com" class="footer-email">ieee.ras.uanl@gmail.com</a>
         <div style="margin-top: 3rem; font-size: 0.7rem; opacity: 0.5;">
             IEEE Robotics & Automation Society Student Branch UANL | FIME | 2026
