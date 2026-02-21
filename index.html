@@ -13,25 +13,26 @@
 <style>
 
 body{
+
 margin:0;
 font-family:Poppins;
 background:#faf7f5;
-color:#3a1d2e;
+color:#2d1022;
+
 }
 
 nav{
-position:fixed;
-width:100%;
+
 background:#6b0f1a;
 padding:15px;
 text-align:center;
-z-index:1000;
+
 }
 
 nav a{
 
-color:#fff3ea;
-margin:0 20px;
+color:white;
+margin:15px;
 text-decoration:none;
 font-weight:500;
 
@@ -43,12 +44,11 @@ height:100vh;
 
 background:
 
-linear-gradient(rgba(60,0,40,.7),rgba(80,0,60,.8)),
+linear-gradient(rgba(70,0,40,.7),rgba(70,0,60,.7)),
 
-url("swarm.jpg");
+url("swarm.PNG");
 
 background-size:cover;
-
 background-position:center;
 
 display:flex;
@@ -61,23 +61,22 @@ align-items:center;
 
 text-align:center;
 
-padding:40px;
-
 color:#fff3ea;
+
+padding:40px;
 
 }
 
 .hero h1{
 
 font-size:3.2rem;
-
-margin:0;
+margin-bottom:10px;
 
 }
 
 .section{
 
-padding:80px 12%;
+padding:70px 12%;
 
 }
 
@@ -87,11 +86,21 @@ color:#6b0f1a;
 
 }
 
+.banner{
+
+width:100%;
+
+border-radius:14px;
+
+margin-top:20px;
+
+}
+
 .cards{
 
 display:grid;
 
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
 gap:25px;
 
@@ -103,19 +112,31 @@ background:white;
 
 padding:25px;
 
-border-radius:12px;
+border-radius:14px;
 
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+box-shadow:0 5px 20px rgba(0,0,0,.1);
 
 }
 
-.banner{
+.logos{
 
-width:100%;
+display:flex;
 
-border-radius:12px;
+gap:40px;
+
+justify-content:center;
+
+align-items:center;
+
+flex-wrap:wrap;
 
 margin-top:20px;
+
+}
+
+.logos img{
+
+height:80px;
 
 }
 
@@ -128,16 +149,6 @@ color:white;
 text-align:center;
 
 padding:25px;
-
-}
-
-@media(max-width:900px){
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
 
 }
 
@@ -161,15 +172,20 @@ grid-template-columns:1fr;
 
 </nav>
 
+
 <section class="hero">
 
 <h1>Swarm Robotics Summer School 2026</h1>
 
 <p>
 
-Design and Implementation of Distributed Robotics Swarms using ROS 2.
+Design and Implementation of Distributed Robotics Swarms using ROS 2
+
+<br><br>
 
 Hosted at Facultad de Ingeniería Mecánica y Eléctrica
+
+<br>
 
 Universidad Autónoma de Nuevo León, México.
 
@@ -177,21 +193,26 @@ Universidad Autónoma de Nuevo León, México.
 
 </section>
 
+
 <section id="about" class="section">
 
 <h2>About the Summer School</h2>
 
 <p>
 
-Practitioner-focused formation on distributed robotics,
+This practitioner-oriented program focuses on real-world implementation of swarm robotics systems using ROS 2.
 
-ROS 2 integration and cooperative autonomy.
+Participants will explore distributed autonomy, multi-agent coordination, decentralized communication architectures and robotic deployment strategies aligned with industrial and research environments.
+
+The objective is to bridge academic robotics education with practical engineering execution.
 
 </p>
 
-<img src="robots.jpg" class="banner">
+<img src="swarm.PNG" class="banner">
 
 </section>
+
+
 
 <section id="program" class="section">
 
@@ -201,43 +222,83 @@ ROS 2 integration and cooperative autonomy.
 
 <div class="card">
 
-<h3>Week 1</h3>
+<h3>Week 1 — Foundations</h3>
 
-ROS2 Architecture and swarm algorithms.
+ROS 2 middleware architecture, DDS communication,
 
-</div>
+Linux robotics environment configuration,
 
-<div class="card">
+distributed system fundamentals,
 
-<h3>Week 2</h3>
-
-Collaborative robotics implementation.
+simulation workflows using Gazebo.
 
 </div>
 
 <div class="card">
 
-<h3>Final Demo</h3>
+<h3>Week 2 — Swarm Algorithms</h3>
 
-Technical validation and presentation.
+Consensus algorithms,
+
+formation control,
+
+behavior-based robotics,
+
+multi-agent localization strategies.
+
+</div>
+
+<div class="card">
+
+<h3>Week 3 — Implementation</h3>
+
+Hardware integration,
+
+sensor fusion,
+
+robot communication protocols,
+
+collaborative testing environments.
+
+</div>
+
+<div class="card">
+
+<h3>Final Demonstration</h3>
+
+Distributed robotic swarm deployment,
+
+team validation,
+
+technical presentation and evaluation.
 
 </div>
 
 </div>
 
 </section>
+
+
 
 <section id="venue" class="section">
 
 <h2>Venue</h2>
 
+<p>
+
 Facultad de Ingeniería Mecánica y Eléctrica
+
+<br>
 
 Universidad Autónoma de Nuevo León, México.
 
-<img src="fime.jpg" class="banner">
+</p>
+
+<img src="FIME.PNG" class="banner">
 
 </section>
+
+
 
 <section id="contact" class="section">
 
@@ -245,15 +306,29 @@ Universidad Autónoma de Nuevo León, México.
 
 IEEE Robotics and Automation Society
 
-Universidad Autónoma Autónoma de Nuevo León Student Branch.
+<br>
+
+Universidad Autónoma de Nuevo León Student Branch
+
+<div class="logos">
+
+<img src="logo_ras.JPG">
+
+<img src="logo_sb.PNG">
+
+</div>
 
 <br><br>
 
 Contact:
 
-IEEE.ras.uanl@gmail.com
+<br>
+
+ieee.ras.uanl@gmail.com
 
 </section>
+
+
 
 <div class="footer">
 
