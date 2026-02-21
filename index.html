@@ -1,94 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Swarm Robotics Summer School 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-font-family:'Inter',sans-serif;
 margin:0;
-background:#0b1220;
+font-family:Poppins;
+background:#0a0f1f;
 color:white;
+scroll-behavior:smooth;
+}
+
+nav{
+position:fixed;
+width:100%;
+background:#020617dd;
+padding:15px;
+text-align:center;
+backdrop-filter:blur(8px);
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-weight:500;
 }
 
 .hero{
+
 height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+
+url("https://images.unsplash.com/photo-1581092921461-eab10380c6b9?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
 display:flex;
+
 flex-direction:column;
+
 justify-content:center;
+
 align-items:center;
+
 text-align:center;
-background:linear-gradient(135deg,#0b1220,#1c2541);
+
+padding:40px;
+
 }
 
 .hero h1{
-font-size:3rem;
+
+font-size:3.5rem;
+
 margin:0;
+
 }
 
 .hero p{
-opacity:.8;
-max-width:700px;
+
+max-width:800px;
+
+opacity:.9;
+
+}
+
+button{
+
+background:#22c55e;
+
+border:none;
+
+padding:15px 30px;
+
+border-radius:8px;
+
+font-size:16px;
+
+cursor:pointer;
+
+margin-top:20px;
+
 }
 
 .section{
-padding:80px 10%;
-background:#111827;
+
+padding:80px 12%;
+
 }
 
 h2{
+
 color:#4ade80;
+
+margin-bottom:20px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
 }
 
 .card{
-background:#1f2937;
-padding:20px;
+
+background:#111827;
+
+padding:25px;
+
 border-radius:12px;
-margin-top:20px;
+
+transition:.3s;
+
 }
 
-footer{
-text-align:center;
-padding:20px;
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.program{
+
 background:#020617;
+
+}
+
+.footer{
+
+background:black;
+
+text-align:center;
+
+padding:25px;
+
 opacity:.7;
+
+}
+
+img.banner{
+
+width:100%;
+
+border-radius:15px;
+
+margin-top:20px;
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="hero">
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#program">Program</a>
+
+<a href="#venue">Venue</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+<section class="hero">
 
 <h1>Swarm Robotics Summer School 2026</h1>
 
 <p>
-Design and Implementation of Distributed Robotic Swarms using ROS 2.
-Hosted at FIME — Universidad Autónoma de Nuevo León.
+
+Design and Implementation of Swarm Robotic Systems using ROS 2.
+
+Practitioner Track — Distributed Intelligence, IoT Integration and Cooperative Robotics.
+
+Hosted at FIME — UANL, Mexico.
+
 </p>
 
-</div>
+<button>Apply Soon</button>
 
-<div class="section">
+</section>
 
-<h2>About the Program</h2>
 
-<div class="card">
+<section id="about" class="section">
+
+<h2>About the Summer School</h2>
 
 <p>
 
-This practitioner-focused summer school explores swarm robotics,
-distributed autonomy, ROS 2 architectures, IoT integration and edge computing.
+This practitioner-focused robotics program explores distributed autonomy,
 
-Participants will design cooperative robotic systems solving real-world
-industrial challenges.
+multi-robot coordination and real-world swarm robotics applications.
+
+Participants will design scalable robotic systems integrating ROS 2,
+
+edge computing and cooperative intelligence.
+
+</p>
+
+<img class="banner"
+
+src="https://images.unsplash.com/photo-1581092160607-ee22731f3c8f?auto=format&fit=crop&w=1600&q=80">
+
+</section>
+
+
+<section id="program" class="section program">
+
+<h2>Program Highlights</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Week 1</h3>
+
+<p>
+
+Intensive technical formation:
+
+ROS 2 architecture, swarm algorithms,
+
+IoT communication and hardware integration.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Week 2</h3>
+
+<p>
+
+Applied team project solving real-world problems:
+
+inspection, mapping and cooperative robotics.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Final Demonstration</h3>
+
+<p>
+
+Live technical presentation and system validation.
+
+Documentation and technical review included.
 
 </p>
 
@@ -96,39 +282,53 @@ industrial challenges.
 
 </div>
 
-<div class="section">
+</section>
 
-<h2>Program Structure</h2>
 
-<div class="card">
+<section id="venue" class="section">
 
-<ul>
+<h2>Venue</h2>
 
-<li>Week 1 — Intensive Technical Training</li>
+<p>
 
-<li>Swarm Robotics Fundamentals</li>
+Faculty of Mechanical and Electrical Engineering (FIME)
 
-<li>ROS 2 Distributed Architectures</li>
+Universidad Autónoma de Nuevo León
 
-<li>IoT and Edge Computing</li>
+Monterrey, Mexico.
 
-<li>Hardware Integration</li>
+</p>
 
-<li>Cooperative Control Algorithms</li>
+<img class="banner"
 
-<li>Week 2 — Applied Project Development</li>
+src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80">
 
-</ul>
+</section>
+
+
+<section id="contact" class="section">
+
+<h2>Organized By</h2>
+
+<p>
+
+IEEE Robotics and Automation Society Student Branch.
+
+Contact:
+
+swarmrobotics@uanl.mx
+
+</p>
+
+</section>
+
+
+<div class="footer">
+
+Swarm Robotics Summer School Proposal — 2026
 
 </div>
-
-</div>
-
-<footer>
-
-IEEE RAS Summer School Proposal — Mexico 2026
-
-</footer>
 
 </body>
+
 </html>
