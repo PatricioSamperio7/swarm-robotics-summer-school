@@ -15,26 +15,26 @@
 body{
 margin:0;
 font-family:Poppins;
-background:#0a0f1f;
-color:white;
-scroll-behavior:smooth;
+background:#faf7f5;
+color:#3a1d2e;
 }
 
 nav{
 position:fixed;
 width:100%;
-background:#020617dd;
+background:#6b0f1a;
 padding:15px;
 text-align:center;
-backdrop-filter:blur(8px);
 z-index:1000;
 }
 
 nav a{
-color:white;
+
+color:#fff3ea;
 margin:0 20px;
 text-decoration:none;
 font-weight:500;
+
 }
 
 .hero{
@@ -43,11 +43,13 @@ height:100vh;
 
 background:
 
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+linear-gradient(rgba(60,0,40,.7),rgba(80,0,60,.8)),
 
-url("https://images.unsplash.com/photo-1581092921461-eab10380c6b9?auto=format&fit=crop&w=1600&q=80");
+url("swarm.jpg");
 
 background-size:cover;
+
+background-position:center;
 
 display:flex;
 
@@ -61,39 +63,15 @@ text-align:center;
 
 padding:40px;
 
+color:#fff3ea;
+
 }
 
 .hero h1{
 
-font-size:3.5rem;
+font-size:3.2rem;
 
 margin:0;
-
-}
-
-.hero p{
-
-max-width:800px;
-
-opacity:.9;
-
-}
-
-button{
-
-background:#22c55e;
-
-border:none;
-
-padding:15px 30px;
-
-border-radius:8px;
-
-font-size:16px;
-
-cursor:pointer;
-
-margin-top:20px;
 
 }
 
@@ -105,9 +83,7 @@ padding:80px 12%;
 
 h2{
 
-color:#4ade80;
-
-margin-bottom:20px;
+color:#6b0f1a;
 
 }
 
@@ -115,7 +91,7 @@ margin-bottom:20px;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(3,1fr);
 
 gap:25px;
 
@@ -123,47 +99,45 @@ gap:25px;
 
 .card{
 
-background:#111827;
+background:white;
 
 padding:25px;
 
 border-radius:12px;
 
-transition:.3s;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
 
 }
 
-.card:hover{
+.banner{
 
-transform:translateY(-8px);
+width:100%;
 
-}
+border-radius:12px;
 
-.program{
-
-background:#020617;
+margin-top:20px;
 
 }
 
 .footer{
 
-background:black;
+background:#6b0f1a;
+
+color:white;
 
 text-align:center;
 
 padding:25px;
 
-opacity:.7;
-
 }
 
-img.banner{
+@media(max-width:900px){
 
-width:100%;
+.cards{
 
-border-radius:15px;
+grid-template-columns:1fr;
 
-margin-top:20px;
+}
 
 }
 
@@ -187,25 +161,21 @@ margin-top:20px;
 
 </nav>
 
-
 <section class="hero">
 
 <h1>Swarm Robotics Summer School 2026</h1>
 
 <p>
 
-Design and Implementation of Swarm Robotic Systems using ROS 2.
+Design and Implementation of Distributed Robotics Swarms using ROS 2.
 
-Practitioner Track — Distributed Intelligence, IoT Integration and Cooperative Robotics.
+Hosted at Facultad de Ingeniería Mecánica y Eléctrica
 
-Hosted at FIME — UANL, Mexico.
+Universidad Autónoma de Nuevo León, México.
 
 </p>
 
-<button>Apply Soon</button>
-
 </section>
-
 
 <section id="about" class="section">
 
@@ -213,24 +183,17 @@ Hosted at FIME — UANL, Mexico.
 
 <p>
 
-This practitioner-focused robotics program explores distributed autonomy,
+Practitioner-focused formation on distributed robotics,
 
-multi-robot coordination and real-world swarm robotics applications.
-
-Participants will design scalable robotic systems integrating ROS 2,
-
-edge computing and cooperative intelligence.
+ROS 2 integration and cooperative autonomy.
 
 </p>
 
-<img class="banner"
-
-src="https://images.unsplash.com/photo-1581092160607-ee22731f3c8f?auto=format&fit=crop&w=1600&q=80">
+<img src="robots.jpg" class="banner">
 
 </section>
 
-
-<section id="program" class="section program">
+<section id="program" class="section">
 
 <h2>Program Highlights</h2>
 
@@ -240,15 +203,7 @@ src="https://images.unsplash.com/photo-1581092160607-ee22731f3c8f?auto=format&fi
 
 <h3>Week 1</h3>
 
-<p>
-
-Intensive technical formation:
-
-ROS 2 architecture, swarm algorithms,
-
-IoT communication and hardware integration.
-
-</p>
+ROS2 Architecture and swarm algorithms.
 
 </div>
 
@@ -256,76 +211,53 @@ IoT communication and hardware integration.
 
 <h3>Week 2</h3>
 
-<p>
-
-Applied team project solving real-world problems:
-
-inspection, mapping and cooperative robotics.
-
-</p>
+Collaborative robotics implementation.
 
 </div>
 
 <div class="card">
 
-<h3>Final Demonstration</h3>
+<h3>Final Demo</h3>
 
-<p>
-
-Live technical presentation and system validation.
-
-Documentation and technical review included.
-
-</p>
+Technical validation and presentation.
 
 </div>
 
 </div>
 
 </section>
-
 
 <section id="venue" class="section">
 
 <h2>Venue</h2>
 
-<p>
+Facultad de Ingeniería Mecánica y Eléctrica
 
-Faculty of Mechanical and Electrical Engineering (FIME)
+Universidad Autónoma de Nuevo León, México.
 
-Universidad Autónoma de Nuevo León
-
-Monterrey, Mexico.
-
-</p>
-
-<img class="banner"
-
-src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80">
+<img src="fime.jpg" class="banner">
 
 </section>
-
 
 <section id="contact" class="section">
 
 <h2>Organized By</h2>
 
-<p>
+IEEE Robotics and Automation Society
 
-IEEE Robotics and Automation Society Student Branch.
+Universidad Autónoma Autónoma de Nuevo León Student Branch.
+
+<br><br>
 
 Contact:
 
-swarmrobotics@uanl.mx
-
-</p>
+IEEE.ras.uanl@gmail.com
 
 </section>
 
-
 <div class="footer">
 
-Swarm Robotics Summer School Proposal — 2026
+IEEE RAS UANL — Swarm Robotics Summer School 2026
 
 </div>
 
