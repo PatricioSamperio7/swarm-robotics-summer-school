@@ -1,341 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>Swarm Robotics Summer School 2026</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-
-margin:0;
-font-family:Poppins;
-background:#faf7f5;
-color:#2d1022;
-
-}
-
-nav{
-
-background:#6b0f1a;
-padding:15px;
-text-align:center;
-
-}
-
-nav a{
-
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:500;
-
-}
-
-.hero{
-
-height:100vh;
-
-background:
-
-linear-gradient(rgba(70,0,40,.7),rgba(70,0,60,.7)),
-
-url("swarm.PNG");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-color:#fff3ea;
-
-padding:40px;
-
-}
-
-.hero h1{
-
-font-size:3.2rem;
-margin-bottom:10px;
-
-}
-
-.section{
-
-padding:70px 12%;
-
-}
-
-h2{
-
-color:#6b0f1a;
-
-}
-
-.banner{
-
-width:100%;
-
-border-radius:14px;
-
-margin-top:20px;
-
-}
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
-}
-
-.card{
-
-background:white;
-
-padding:25px;
-
-border-radius:14px;
-
-box-shadow:0 5px 20px rgba(0,0,0,.1);
-
-}
-
-.logos{
-
-display:flex;
-
-gap:40px;
-
-justify-content:center;
-
-align-items:center;
-
-flex-wrap:wrap;
-
-margin-top:20px;
-
-}
-
-.logos img{
-
-height:80px;
-
-}
-
-.footer{
-
-background:#6b0f1a;
-
-color:white;
-
-text-align:center;
-
-padding:25px;
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swarm Robotics Summer School 2026 | IEEE RAS UANL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wine-red: #630d16;
+            --deep-purple: #2e1a47;
+            --cream: #fdfaf5;
+            --off-white: #f5f5f5;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(253, 250, 245, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            letter-spacing: -1px;
+            font-size: 1.2rem;
+            color: var(--deep-purple);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--wine-red);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('swarm.PNG') center/cover no-repeat;
+            color: white;
+            padding: 0 5%;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(46, 26, 71, 0.85) 0%, rgba(99, 13, 22, 0.7) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p.subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--cream);
+            opacity: 0.9;
+        }
+
+        .hero .institution {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+            display: block;
+        }
+
+        .btn-apply {
+            padding: 1.2rem 3rem;
+            background-color: var(--cream);
+            color: var(--deep-purple);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 2px;
+            transition: var(--transition);
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-apply:hover {
+            transform: translateY(-5px);
+            background-color: var(--wine-red);
+            color: white;
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 10%;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--wine-red);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        /* Program Structure */
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .week-card {
+            background: white;
+            padding: 2.5rem;
+            border-left: 5px solid var(--deep-purple);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .week-card:hover {
+            transform: translateY(-10px);
+            border-left-color: var(--wine-red);
+        }
+
+        .week-card h3 {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--wine-red);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .week-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .week-card ul {
+            list-style: none;
+        }
+
+        .week-card ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .week-card ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--wine-red);
+        }
+
+        /* Highlights */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .highlight-item {
+            background: var(--cream);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .highlight-item h5 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--deep-purple);
+        }
+
+        /* Venue */
+        .venue-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            background: white;
+            padding: 4rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .venue-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: var(--transition);
+        }
+
+        .venue-img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* Organizers */
+        .organizers {
+            text-align: center;
+            background: var(--off-white);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .logo-container img {
+            max-height: 100px;
+            filter: grayscale(100%) contrast(1.2);
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .logo-container img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Contact & Footer */
+        footer {
+            padding: 80px 10% 40px;
+            background: var(--deep-purple);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-link {
+            color: var(--cream);
+            font-size: 1.8rem;
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            display: block;
+            margin: 2rem 0;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--wine-red);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 968px) {
+            .about-grid, .venue-container { grid-template-columns: 1fr; }
+            .highlights-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+            nav { padding: 1rem 5%; }
+            .nav-links { display: none; }
+        }
+    </style>
 </head>
-
 <body>
 
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#about">About</a>
-
-<a href="#program">Program</a>
-
-<a href="#venue">Venue</a>
-
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-<section class="hero">
-
-<h1>Swarm Robotics Summer School 2026</h1>
-
-<p>
-
-Design and Implementation of Distributed Robotics Swarms using ROS 2
-
-<br><br>
-
-Hosted at Facultad de Ingeniería Mecánica y Eléctrica
-
-<br>
-
-Universidad Autónoma de Nuevo León, México.
-
-</p>
-
-</section>
-
-
-<section id="about" class="section">
-
-<h2>About the Summer School</h2>
-
-<p>
-
-This practitioner-oriented program focuses on real-world implementation of swarm robotics systems using ROS 2.
-
-Participants will explore distributed autonomy, multi-agent coordination, decentralized communication architectures and robotic deployment strategies aligned with industrial and research environments.
-
-The objective is to bridge academic robotics education with practical engineering execution.
-
-</p>
-
-<img src="swarm.PNG" class="banner">
-
-</section>
-
-
-
-<section id="program" class="section">
-
-<h2>Program Highlights</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Week 1 — Foundations</h3>
-
-ROS 2 middleware architecture, DDS communication,
-
-Linux robotics environment configuration,
-
-distributed system fundamentals,
-
-simulation workflows using Gazebo.
-
-</div>
-
-<div class="card">
-
-<h3>Week 2 — Swarm Algorithms</h3>
-
-Consensus algorithms,
-
-formation control,
-
-behavior-based robotics,
-
-multi-agent localization strategies.
-
-</div>
-
-<div class="card">
-
-<h3>Week 3 — Implementation</h3>
-
-Hardware integration,
-
-sensor fusion,
-
-robot communication protocols,
-
-collaborative testing environments.
-
-</div>
-
-<div class="card">
-
-<h3>Final Demonstration</h3>
-
-Distributed robotic swarm deployment,
-
-team validation,
-
-technical presentation and evaluation.
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="venue" class="section">
-
-<h2>Venue</h2>
-
-<p>
-
-Facultad de Ingeniería Mecánica y Eléctrica
-
-<br>
-
-Universidad Autónoma de Nuevo León, México.
-
-</p>
-
-<img src="FIME.PNG" class="banner">
-
-</section>
-
-
-
-<section id="contact" class="section">
-
-<h2>Organized By</h2>
-
-IEEE Robotics and Automation Society
-
-<br>
-
-Universidad Autónoma de Nuevo León Student Branch
-
-<div class="logos">
-
-<img src="logo_ras.JPG">
-
-<img src="logo_sb.PNG">
-
-</div>
-
-<br><br>
-
-Contact:
-
-<br>
-
-ieee.ras.uanl@gmail.com
-
-</section>
-
-
-
-<div class="footer">
-
-IEEE RAS UANL — Swarm Robotics Summer School 2026
-
-</div>
-
+    <nav>
+        <div class="nav-logo">IEEE RAS UANL</div>
+        <div class="nav-links">
+            <a href="#about">Program</a>
+            <a href="#curriculum">Structure</a>
+            <a href="#venue">Venue</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="institution">Facultad de Ingeniería Mecánica y Eléctrica</span>
+            <h1>Swarm Robotics Summer School 2026</h1>
+            <p class="subtitle">Design and Implementation of Distributed Robotics Swarms using ROS 2</p>
+            <a href="mailto:ieee.ras.uanl@gmail.com" class="btn-apply">Apply Soon</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>About the Program</h2>
+                <p>The Swarm Robotics Summer School is a rigorous technical intensive designed for practitioners seeking to master the complexities of distributed robotics systems. Unlike theoretical seminars, this program emphasizes engineering execution and real-world implementation.</p>
+                <p>Participants will dive deep into swarm intelligence, focusing on the decentralized coordination of multiple agents. The curriculum is built entirely on the ROS 2 framework, ensuring students acquire industry-standard skills in middleware communication, DDS protocols, and scalable robotics architectures.</p>
+            </div>
+            <div class="about-specs">
+                <div class="week-card" style="border-left-color: var(--wine-red);">
+                    <h4>Technical Depth</h4>
+                    <p>Focusing on ROS 2 Humble/Jazzy, distributed Linux environments, and hardware-in-the-loop testing. We bridge the gap between algorithmic abstraction and physical deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum" style="background: var(--off-white);">
+        <h2>Program Structure</h2>
+        <div class="curriculum-grid">
+            <div class="week-card">
+                <h3>Week 1</h3>
+                <h4>Foundations</h4>
+                <ul>
+                    <li>Linux robotics environment optimization</li>
+                    <li>ROS 2 architecture & Workspace management</li>
+                    <li>DDS communication & Quality of Service (QoS)</li>
+                    <li>Gazebo Ignition multi-robot simulation</li>
+                    <li>Distributed systems communication theory</li>
+                    <li>Robot networking & Latency management</li>
+                </ul>
+            </div>
+            <div class="week-card">
+                <h3>Week 2</h3>
+                <h4>Swarm Intelligence</h4>
+                <ul>
+                    <li>Consensus algorithms & Distributed voting</li>
+                    <li>Formation control & Path planning</li>
+                    <li>Behavior-based robotics (Subsumption)</li>
+                    <li>Global/Local localization strategies</li>
+                    <li>Multi-agent communication protocols</li>
+                    <li>Decentralized task allocation</li>
+                </ul>
+            </div>
+            <div class="week-card">
+                <h3>Week 3</h3>
+                <h4>Implementation</h4>
+                <ul>
+                    <li>Hardware-software integration (Embedded)</li>
+                    <li>Sensor fusion in multi-robot contexts</li>
+                    <li>ROS nodes cross-deployment</li>
+                    <li>Real-time robot communication protocols</li>
+                    <li>Collaborative debugging techniques</li>
+                    <li>Swarm testing in controlled environments</li>
+                </ul>
+            </div>
+            <div class="week-card">
+                <h3>Final Stage</h3>
+                <h4>Demonstration</h4>
+                <ul>
+                    <li>Distributed swarm deployment (Physical)</li>
+                    <li>Technical defense & Peer review</li>
+                    <li>System performance evaluation</li>
+                    <li>Final Certification</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Program Highlights</h2>
+        <div class="highlights-grid">
+            <div class="highlight-item">
+                <h5>Hands-on Robotics</h5>
+                <p>Direct interaction with physical robotic platforms and embedded systems.</p>
+            </div>
+            <div class="highlight-item">
+                <h5>ROS 2 Implementation</h5>
+                <p>End-to-end development using the latest robotics middleware standards.</p>
+            </div>
+            <div class="highlight-item">
+                <h5>Industry Oriented</h5>
+                <p>Curriculum designed to meet the demands of modern robotics R&D sectors.</p>
+            </div>
+            <div class="highlight-item">
+                <h5>Collaborative Lab</h5>
+                <p>Intensive experimentation in a high-performance lab environment.</p>
+            </div>
+            <div class="highlight-item">
+                <h5>Real Swarm Deployment</h5>
+                <p>Transition from Gazebo simulation to physical multi-robot coordination.</p>
+            </div>
+            <div class="highlight-item">
+                <h5>Expert Mentorship</h5>
+                <p>Guidance from IEEE Robotics and Automation Society members.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="venue">
+        <div class="venue-container">
+            <div class="venue-content">
+                <h2>Venue</h2>
+                <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem;">
+                    The program is hosted at the <strong>Facultad de Ingeniería Mecánica y Eléctrica</strong> of the <strong>Universidad Autónoma de Nuevo León</strong>. 
+                </p>
+                <p style="color: var(--text-light);">
+                    As one of the premier engineering institutions in Mexico, FIME provides the advanced infrastructure, specialized robotics laboratories, and computational resources necessary for large-scale swarm deployment and testing.
+                </p>
+            </div>
+            <img src="FIME.PNG" alt="FIME UANL Building" class="venue-img">
+        </div>
+    </section>
+
+    <section class="organizers">
+        <h2 style="text-align: center; margin-bottom: 1rem;">Organized By</h2>
+        <p style="margin-bottom: 3rem; font-weight: 600;">IEEE Robotics and Automation Society <br> Universidad Autónoma de Nuevo León Student Branch</p>
+        <div class="logo-container">
+            <img src="logo_ras.JPG" alt="IEEE RAS Logo">
+            <img src="logo_sb.PNG" alt="IEEE UANL Student Branch Logo">
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3>Inquiries & Applications</h3>
+        <a href="mailto:ieee.ras.uanl@gmail.com" class="contact-link">ieee.ras.uanl@gmail.com</a>
+        <p>San Nicolás de los Garza, Nuevo León, México</p>
+        <div class="copyright">
+            © 2026 Swarm Robotics Summer School | IEEE RAS UANL | Facultad de Ingeniería Mecánica y Eléctrica
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>
