@@ -18,12 +18,10 @@
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        /* Tipografía Unificada */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         body { background-color: #fff; color: var(--text-dark); line-height: 1.6; }
 
-        /* Navigation con 3 Logos */
         nav {
             position: fixed; top: 0; width: 100%; padding: 0.8rem 5%;
             display: flex; justify-content: space-between; align-items: center;
@@ -43,7 +41,6 @@
         .nav-menu.active { right: 0; }
         .nav-menu a { color: white; text-decoration: none; font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; }
 
-        /* Hero */
         .hero {
             height: 85vh; display: flex; align-items: center; justify-content: center;
             background: url('SWARM.png') center/cover no-repeat; position: relative; color: white; margin-top: 60px;
@@ -60,7 +57,6 @@
         .host-block h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; color: var(--wine-red); margin-bottom: 10px; }
         .host-names { font-weight: 600; color: var(--deep-purple); font-size: 1.1rem; }
 
-        /* Sections */
         section { padding: 90px 10%; border-bottom: 1px solid #eee; }
         .section-title { font-weight: 700; font-size: 2.2rem; color: var(--wine-red); margin-bottom: 3.5rem; position: relative; }
         .section-title::after { content: ''; position: absolute; bottom: -12px; left: 0; width: 60px; height: 4px; background: var(--wine-red); }
@@ -80,11 +76,16 @@
         .btn-main { padding: 18px 45px; background: var(--wine-red); color: white; text-decoration: none; font-weight: 700; display: inline-block; text-transform: uppercase; letter-spacing: 1.5px; transition: var(--transition); border: none; font-size: 0.9rem; }
         .btn-main:hover { background: var(--deep-purple); box-shadow: 0 12px 25px rgba(46, 26, 71, 0.2); }
 
+        .schedule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 2rem; }
+        .day-item { border-bottom: 1px solid #eee; padding: 10px 0; display: flex; justify-content: space-between; font-size: 0.9rem; }
+        .day-label { font-weight: 700; color: var(--wine-red); min-width: 100px; }
+
         footer { background: #111; color: white; padding: 70px 10% 40px; text-align: center; }
 
         @media (max-width: 768px) {
             section { padding: 70px 5%; }
             .nav-menu { width: 100%; }
+            .schedule-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -93,7 +94,7 @@
     <nav>
         <div class="nav-brand">
             <img src="LOGO%20IEEE.png?v=2" alt="IEEE Logo">
-            <img src="LOGO%20RAS.png?v=2" alt="IEEE RAS Logo">
+            <img src="LOGO%20RAS.jpg?v=2" alt="IEEE RAS Logo">
             <img src="LOGO%20SB.png?v=2" alt="IEEE SB Logo">
         </div>
         <div class="menu-icon" onclick="toggleMenu()">
@@ -104,11 +105,11 @@
     <div class="nav-menu" id="navMenu">
         <a href="#about" onclick="toggleMenu()">Why Attend</a>
         <a href="#syllabus" onclick="toggleMenu()">Academic Program</a>
+        <a href="#outcomes" onclick="toggleMenu()">Expected Outcomes</a>
         <a href="#apply" onclick="toggleMenu()">Application Process</a>
-        <a href="#certification" onclick="toggleMenu()">Certification</a>
         <a href="#venue" onclick="toggleMenu()">Venue</a>
         <a href="#organization" onclick="toggleMenu()">Leadership</a>
-        <a href="#faq" onclick="toggleMenu()">FAQ</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
 
     <header class="hero">
@@ -138,6 +139,7 @@
                     <li>ROS 2 industrial-grade architecture.</li>
                     <li>Hands-on multi-robot coordination.</li>
                     <li>Industry-relevant distributed systems.</li>
+                    <li style="font-weight: 600; color: var(--wine-red);">Hands-on practitioner certification focused on real engineering deployment.</li>
                 </ul>
             </div>
             <div class="card">
@@ -146,7 +148,7 @@
                     <li>Functional ROS 2 swarm system.</li>
                     <li>Documented technical repository.</li>
                     <li>Comprehensive technical manual.</li>
-                    <li>Official Project Recognition.</li>
+                    <li>Official IEEE Certificate of Completion.</li>
                 </ul>
             </div>
             <div class="card">
@@ -165,31 +167,67 @@
         <h2 class="section-title">Academic Program Depth</h2>
         <div class="grid">
             <div class="card">
-                <h3>Core Modules</h3>
+                <h3>Advanced Core Modules</h3>
                 <ul class="req-list">
-                    <li>Swarm Robotics Foundations.</li>
-                    <li>ROS 2 Distributed Architectures.</li>
-                    <li>DDS & QoS Communication Layers.</li>
-                    <li>Hardware Integration & Sensor Fusion.</li>
-                    <li>Cooperative Control Algorithms.</li>
+                    <li>Swarm Robotics Foundations & Emergent Behavior Analysis.</li>
+                    <li>ROS 2 Scalable Namespace Architectures.</li>
+                    <li>DDS/QoS Communication: Failure Tolerance & Latency Handling.</li>
+                    <li>Hardware-Software Integration Workflows.</li>
+                    <li>Distributed Decision-making Systems.</li>
+                    <li>Edge Computing Integration for Robotic Swarms.</li>
+                    <li>IoT Data Acquisition using Mobile Robotic Nodes.</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Week 1 Schedule</h3>
-                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px;">Simulation & Foundations (Online):</p>
+                <h3>Real Engineering Challenges</h3>
                 <ul class="req-list">
-                    <li>Architecture & Distributed Middleware.</li>
-                    <li>Swarm Intelligence Theory.</li>
-                    <li>Gazebo Multi-robot Simulation.</li>
+                    <li>Cooperative Industrial Infrastructure Inspection.</li>
+                    <li>Distributed Swarm Mapping and Exploration.</li>
+                    <li>Cooperative Object Transport.</li>
+                    <li>IoT Environmental Monitoring using Robotic Agents.</li>
                 </ul>
             </div>
-            <div class="card">
-                <h3>Week 2 Schedule</h3>
-                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px;">Implementation (On-site):</p>
+        </div>
+
+        <div style="margin-top: 4rem;">
+            <h3>Academic Schedule Overview</h3>
+            <div class="schedule-grid">
+                <div>
+                    <h4 style="color:var(--deep-purple); margin-bottom:1rem;">Week 1: Foundations & Simulation</h4>
+                    <div class="day-item"><span class="day-label">Day 1</span> <span>Swarm Robotics Foundations</span></div>
+                    <div class="day-item"><span class="day-label">Day 2</span> <span>ROS 2 Distributed Architecture Design</span></div>
+                    <div class="day-item"><span class="day-label">Day 3</span> <span>DDS Communication and QoS</span></div>
+                    <div class="day-item"><span class="day-label">Day 4</span> <span>Hardware Integration and Embedded Systems</span></div>
+                    <div class="day-item"><span class="day-label">Day 5</span> <span>Cooperative Control Algorithms</span></div>
+                </div>
+                <div>
+                    <h4 style="color:var(--deep-purple); margin-bottom:1rem;">Week 2: Applied Engineering Project</h4>
+                    <div class="day-item"><span class="day-label">Day 6</span> <span>Project Design and Planning</span></div>
+                    <div class="day-item"><span class="day-label">Day 7</span> <span>System Implementation</span></div>
+                    <div class="day-item"><span class="day-label">Day 8</span> <span>Swarm Behavior Testing</span></div>
+                    <div class="day-item"><span class="day-label">Day 9</span> <span>Integration and Documentation</span></div>
+                    <div class="day-item"><span class="day-label">Day 10</span> <span>Final Demonstration</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="outcomes">
+        <h2 class="section-title">Expected Outcomes</h2>
+        <div class="grid">
+            <div class="card" style="border-top-color: var(--deep-purple);">
+                <h3>Technical Proficiency</h3>
                 <ul class="req-list">
-                    <li>Hardware Integration & R2R Comms.</li>
-                    <li>Swarm Behavior Deployment.</li>
-                    <li>Final Applied Project Demonstration.</li>
+                    <li>Deploy a functional multi-robot swarm system.</li>
+                    <li>Design scalable ROS 2 distributed architectures.</li>
+                </ul>
+            </div>
+            <div class="card" style="border-top-color: var(--deep-purple);">
+                <h3>Engineering Execution</h3>
+                <ul class="req-list">
+                    <li>Implement cooperative decision-making algorithms.</li>
+                    <li>Produce technical documentation aligned with engineering standards.</li>
+                    <li>Present validated applied robotics solutions.</li>
                 </ul>
             </div>
         </div>
@@ -200,18 +238,19 @@
         <div class="grid">
             <div class="card">
                 <h3>Eligibility & Selection</h3>
-                <p style="font-size: 0.85rem; margin-bottom: 10px;">Selection based on:</p>
+                <p style="font-size: 0.85rem; margin-bottom: 10px;">Selection based on technical profile and motivation:</p>
                 <ul class="req-list">
                     <li>Motivation statement quality.</li>
-                    <li>Technical programming experience.</li>
-                    <li>Academic research interest.</li>
+                    <li>Programming experience.</li>
+                    <li>Academic interest in Swarm Robotics.</li>
+                    <li style="color: var(--wine-red); font-weight: 600;">Limited capacity cohort (approx. 20–25 participants) to ensure hands-on mentoring.</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Technical Requirements</h3>
+                <h3>Technical Recommendations</h3>
                 <ul class="req-list">
-                    <li><strong>Laptop with Ubuntu 22.04+:</strong> Native environment mandatory for ROS 2.</li>
-                    <li><strong>C++/Python:</strong> Foundational knowledge in OOP.</li>
+                    <li><strong>Ubuntu 22.04 LTS recommended:</strong> Provides optimal ROS 2 Humble/Jazzy compatibility for development.</li>
+                    <li><strong>C++/Python:</strong> Foundational knowledge in OOP is recommended.</li>
                 </ul>
             </div>
         </div>
@@ -229,20 +268,6 @@
         </div>
     </section>
 
-    <section id="certification" style="background: var(--cream);">
-        <h2 class="section-title">Certification & Recognition</h2>
-        <div class="grid">
-            <div class="card" style="border-top-color: var(--wine-red);">
-                <h3>Official IEEE Certificate</h3>
-                <p>Upon successful completion of the program, participants will receive an official participation certificate issued by the IEEE Robotics and Automation Society (RAS) Student Chapter.</p>
-            </div>
-            <div class="card" style="border-top-color: var(--wine-red);">
-                <h3>Project Validation</h3>
-                <p>The certificate validates the hands-on technical competencies acquired in ROS 2 distributed architectures and real-world swarm deployment.</p>
-            </div>
-        </div>
-    </section>
-
     <section id="venue">
         <h2 class="section-title">Venue: Monterrey, Mexico</h2>
         <div class="grid" style="grid-template-columns: 1.5fr 1fr;">
@@ -250,44 +275,55 @@
                 <img src="FIME.png" alt="FIME UANL" style="width: 100%; border-radius: 4px; filter: grayscale(10%);">
             </div>
             <div>
-                <h3>Why Monterrey?</h3>
+                <h3>Strategic Hub</h3>
                 <p style="font-size: 0.9rem; color: var(--text-light);">
-                    Monterrey serves as Mexico's premier industrial ecosystem. Hosted at <strong>Facultad de Ingeniería Mecánica y Eléctrica</strong>, the venue provides the ideal infrastructure for advanced robotics.
+                    Monterrey serves as Mexico's premier industrial ecosystem and manufacturing hub. Hosted at <strong>Facultad de Ingeniería Mecánica y Eléctrica</strong>, the venue provides the ideal infrastructure for advanced robotics development and industry networking.
                 </p>
             </div>
         </div>
     </section>
 
     <section id="organization">
-        <h2 class="section-title">Program Leadership</h2>
+        <h2 class="section-title">Program Organization</h2>
         <div class="grid">
             <div class="card">
-                <h3>Program Director</h3>
+                <h3>Program Leadership</h3>
                 <p><strong>Patricio Samperio Pérez</strong><br>Coordinator, IEEE RAS Student Chapter Universidad Autónoma de Nuevo León</p>
             </div>
             <div class="card">
-                <h3>Academic Supervisor</h3>
+                <h3>Academic Supervision</h3>
                 <p><strong>Ing. René Guzmán</strong><br>Universidad Autónoma de Nuevo León | Facultad de Ingeniería Mecánica y Eléctrica</p>
             </div>
         </div>
     </section>
 
     <section id="support">
-        <h2 class="section-title">Institutional Support</h2>
+        <h2 class="section-title">Institutional Partners</h2>
         <div class="card" style="border-left: 5px solid var(--deep-purple);">
-            <h3>Expected Support From:</h3>
+            <h3>Collaborating Entities:</h3>
             <ul class="req-list">
-                <li>IEEE RAS Technical Committees (Pending Confirmation).</li>
+                <li style="font-weight: 600; color: var(--wine-red);">IEEE RAS Technical Committee endorsement pending confirmation.</li>
                 <li>Universidad Autónoma de Nuevo León.</li>
                 <li>Facultad de Ingeniería Mecánica y Eléctrica.</li>
             </ul>
         </div>
     </section>
 
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="grid">
+            <div class="card" style="border-top:none; background:transparent; box-shadow:none; padding-left:0;">
+                <p><strong>IEEE Robotics and Automation Society Student Chapter</strong></p>
+                <p>Universidad Autónoma de Nuevo León</p>
+                <p style="margin-top: 1rem;">Email: <a href="mailto:ieee.ras.uanl@gmail.com" style="color: var(--wine-red); text-decoration:none;">ieee.ras.uanl@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
     <section id="faq" style="background: #fdfdfd;">
         <h2 class="section-title">FAQ</h2>
         <div class="grid">
-            <div class="faq-item"><strong>Is the program hybrid?</strong><p>Yes. Week 1 is intensive theoretical training held online or in-person, and Week 2 is hands-on project development on-site at FIME.</p></div>
+            <div class="faq-item"><strong>Do participants receive IEEE certification?</strong><p>Yes, an official participation certificate is issued by the IEEE RAS Student Chapter.</p></div>
             <div class="faq-item"><strong>Is hardware mandatory?</strong><p>Only your laptop is required. Robotic platforms are provided by the lab.</p></div>
             <div class="faq-item"><strong>Is accommodation included?</strong><p>No, participants must arrange their own lodging in Monterrey.</p></div>
             <div class="faq-item"><strong>Are international students accepted?</strong><p>Yes, we welcome students and researchers from all countries.</p></div>
