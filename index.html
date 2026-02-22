@@ -18,7 +18,6 @@
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        /* Tipografía Consistente */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         body { background-color: #fff; color: var(--text-dark); line-height: 1.6; }
@@ -40,9 +39,9 @@
             padding: 100px 40px; transition: var(--transition); z-index: 2050;
         }
         .nav-menu.active { right: 0; }
-        .nav-menu a { color: white; text-decoration: none; font-size: 1rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; }
+        .nav-menu a { color: white; text-decoration: none; font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; }
 
-        /* Hero Section */
+        /* Hero & Institutional Header */
         .hero {
             height: 85vh; display: flex; align-items: center; justify-content: center;
             background: url('SWARM.png') center/cover no-repeat; position: relative; color: white; margin-top: 60px;
@@ -51,7 +50,7 @@
         .hero-content { position: relative; z-index: 2; text-align: center; max-width: 1000px; padding: 20px; }
         
         .inst-top { text-transform: uppercase; letter-spacing: 4px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1.5rem; color: var(--cream); }
-        .hero h1 { font-weight: 700; font-size: clamp(2.2rem, 6vw, 4.2rem); margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -1px; }
+        .hero h1 { font-weight: 700; font-size: clamp(2rem, 6vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -1px; }
         .hero p.tagline { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; margin-bottom: 2.5rem; color: #ccc; }
 
         .host-block { background: var(--cream); padding: 40px 10%; text-align: center; border-bottom: 1px solid #ddd; }
@@ -64,8 +63,7 @@
         .section-title::after { content: ''; position: absolute; bottom: -12px; left: 0; width: 60px; height: 4px; background: var(--wine-red); }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { padding: 40px; background: #fcfcfc; border-radius: 4px; border-top: 5px solid var(--wine-red); box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: var(--transition); }
-        .card:hover { transform: translateY(-5px); }
+        .card { padding: 40px; background: #fcfcfc; border-radius: 4px; border-top: 5px solid var(--wine-red); box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
         .card h3 { color: var(--deep-purple); margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 
         /* Timeline Visual */
@@ -73,16 +71,14 @@
         .step { flex: 1; min-width: 180px; text-align: center; }
         .step-num { width: 45px; height: 45px; background: var(--wine-red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 700; font-size: 1rem; border: 4px solid #fff; box-shadow: 0 0 0 2px var(--wine-red); }
 
-        /* Requirements List */
         .req-list { list-style: none; }
-        .req-list li { margin-bottom: 12px; padding-left: 25px; position: relative; font-size: 0.95rem; color: var(--text-light); }
-        .req-list li::before { content: '→'; position: absolute; left: 0; color: var(--wine-red); font-weight: 700; }
+        .req-list li { margin-bottom: 12px; padding-left: 25px; position: relative; font-size: 0.9rem; color: var(--text-light); }
+        .req-list li::before { content: '✓'; position: absolute; left: 0; color: var(--wine-red); font-weight: 700; }
 
         .btn-main { padding: 18px 45px; background: var(--wine-red); color: white; text-decoration: none; font-weight: 700; display: inline-block; text-transform: uppercase; letter-spacing: 1.5px; transition: var(--transition); border: none; font-size: 0.9rem; }
         .btn-main:hover { background: var(--deep-purple); box-shadow: 0 12px 25px rgba(46, 26, 71, 0.2); }
 
         footer { background: #111; color: white; padding: 70px 10% 40px; text-align: center; }
-        .footer-nav a { color: #999; text-decoration: none; margin: 0 15px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
 
         @media (max-width: 768px) {
             section { padding: 70px 5%; }
@@ -103,10 +99,11 @@
     </nav>
 
     <div class="nav-menu" id="navMenu">
-        <a href="#about" onclick="toggleMenu()">Objectives</a>
+        <a href="#about" onclick="toggleMenu()">Why Attend</a>
         <a href="#syllabus" onclick="toggleMenu()">Academic Program</a>
-        <a href="#apply" onclick="toggleMenu()">Application</a>
+        <a href="#apply" onclick="toggleMenu()">Application Process</a>
         <a href="#venue" onclick="toggleMenu()">Venue</a>
+        <a href="#organization" onclick="toggleMenu()">Leadership</a>
         <a href="#faq" onclick="toggleMenu()">FAQ</a>
     </div>
 
@@ -116,76 +113,80 @@
             <p class="inst-top">Universidad Autónoma de Nuevo León</p>
             <h1>Swarm Robotics Summer School 2026</h1>
             <p class="tagline">Design and Implementation of Distributed Robotics Swarms using ROS 2</p>
-            <p style="font-weight: 500; letter-spacing: 1px; font-size: 0.9rem; color: #eee;">IEEE ROBOTICS AND AUTOMATION SOCIETY STUDENT CHAPTER</p>
+            <p style="font-weight: 500; letter-spacing: 1px; font-size: 0.85rem; color: #eee;">IEEE ROBOTICS AND AUTOMATION SOCIETY STUDENT CHAPTER</p>
         </div>
     </header>
 
     <div class="host-block">
         <h2>Institutional Host</h2>
         <div class="host-names">
-            Facultad de Ingeniería Mecánica y Eléctrica (FIME)
+            Universidad Autónoma de Nuevo León | Facultad de Ingeniería Mecánica y Eléctrica
         </div>
     </div>
 
     <section id="about">
-        <h2 class="section-title">Value Proposition</h2>
+        <h2 class="section-title">Why Attend?</h2>
         <div class="grid">
             <div class="card">
-                <h3>Core Competencies</h3>
+                <h3>Value Proposition</h3>
                 <ul class="req-list">
-                    <li>Development of ROS 2 distributed architectures.</li>
-                    <li>Implementation of multi-robot coordination algorithms.</li>
-                    <li>Deployment of swarm logic on physical embedded hardware.</li>
-                    <li>Optimization of DDS/QoS communication layers.</li>
+                    <li>Real-world swarm robotics deployment.</li>
+                    <li>ROS 2 industrial-grade architecture.</li>
+                    <li>Hands-on multi-robot coordination.</li>
+                    <li>Industry-relevant distributed systems.</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Technical Deliverables</h3>
+                <h3>Learning Deliverables</h3>
                 <ul class="req-list">
-                    <li>Functional ROS 2 multi-agent repository.</li>
-                    <li>System technical documentation.</li>
-                    <li>Performance demonstration video.</li>
-                    <li>Official IEEE Participation Certificate.</li>
+                    <li>Functional ROS 2 swarm system.</li>
+                    <li>Documented technical repository.</li>
+                    <li>Comprehensive technical manual.</li>
+                    <li>Official IEEE Certificate of Completion.</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Target Audience</h3>
+                <h3>Who Should Apply?</h3>
                 <ul class="req-list">
-                    <li>Senior undergraduate students.</li>
-                    <li>Graduate researchers (MSc/PhD).</li>
-                    <li>Autonomous systems developers.</li>
+                    <li>Robotics researchers (MSc/PhD).</li>
                     <li>Embedded systems engineers.</li>
+                    <li>AI robotics students.</li>
+                    <li>Senior undergraduate students.</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="syllabus" style="background: #fdfdfd;">
-        <h2 class="section-title">Academic Program</h2>
+        <h2 class="section-title">Academic Program Depth</h2>
         <div class="grid">
             <div class="card">
-                <h3>Module 01: Foundations</h3>
-                <p style="font-size: 0.9rem; color: var(--text-light);">Principles of Swarm Robotics, self-organization theory, and analysis of emergent behaviors in complex systems.</p>
+                <h3>Core Modules</h3>
+                <ul class="req-list">
+                    <li>Swarm Robotics Foundations.</li>
+                    <li>ROS 2 Distributed Architectures.</li>
+                    <li>DDS & QoS Communication Layers.</li>
+                    <li>Hardware Integration & Sensor Fusion.</li>
+                    <li>Cooperative Control Algorithms.</li>
+                </ul>
             </div>
             <div class="card">
-                <h3>Module 02: ROS 2 Architecture</h3>
-                <p style="font-size: 0.9rem; color: var(--text-light);">Distributed nodes, namespaces management, and scalable communication for multi-robot fleets.</p>
+                <h3>Week 1 Schedule</h3>
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px;">Simulation & Foundations (Online):</p>
+                <ul class="req-list">
+                    <li>Architecture & Distributed Middleware.</li>
+                    <li>Swarm Intelligence Theory.</li>
+                    <li>Gazebo Multi-robot Simulation.</li>
+                </ul>
             </div>
             <div class="card">
-                <h3>Module 03: DDS & Networking</h3>
-                <p style="font-size: 0.9rem; color: var(--text-light);">Configuration of Quality of Service (QoS) profiles, DDS middleware tuning, and R2R communication.</p>
-            </div>
-            <div class="card">
-                <h3>Module 04: Hardware Integration</h3>
-                <p style="font-size: 0.9rem; color: var(--text-light);">Embedded ROS 2 deployment, sensor fusion, and physical hardware-software synchronization.</p>
-            </div>
-            <div class="card">
-                <h3>Module 05: Cooperative Control</h3>
-                <p style="font-size: 0.9rem; color: var(--text-light);">Implementation of decentralized decision-making algorithms and swarm coordination logic.</p>
-            </div>
-            <div class="card">
-                <h3>Final Project</h3>
-                <p style="font-size: 0.9rem; color: var(--text-light);">Integration, validation, and physical deployment of a functional swarm robotics system.</p>
+                <h3>Week 2 Schedule</h3>
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px;">Implementation (On-site):</p>
+                <ul class="req-list">
+                    <li>Hardware Integration & R2R Comms.</li>
+                    <li>Swarm Behavior Deployment.</li>
+                    <li>Final Applied Project Demonstration.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -194,95 +195,102 @@
         <h2 class="section-title">Application Process</h2>
         <div class="grid">
             <div class="card">
-                <h3>Selection Criteria</h3>
+                <h3>Eligibility & Selection</h3>
+                <p style="font-size: 0.85rem; margin-bottom: 10px;">Selection based on:</p>
                 <ul class="req-list">
-                    <li>Academic alignment with robotics research.</li>
-                    <li>Technical proficiency in C++ or Python.</li>
-                    <li>Quality of the statement of purpose.</li>
+                    <li>Motivation statement quality.</li>
+                    <li>Technical programming experience.</li>
+                    <li>Academic research interest.</li>
                 </ul>
             </div>
             <div class="card">
                 <h3>Technical Requirements</h3>
                 <ul class="req-list">
-                    <li><strong>Laptop with Ubuntu 22.04/24.04:</strong> Mandatory as the native environment for ROS 2 Humble/Jazzy deployment.</li>
-                    <li><strong>Basic Programming:</strong> Understanding of OOP in C++ or Python.</li>
+                    <li><strong>Laptop with Ubuntu 22.04+:</strong> Native environment mandatory for ROS 2 Humble/Jazzy.</li>
+                    <li><strong>C++/Python:</strong> Foundational knowledge in OOP.</li>
                 </ul>
             </div>
         </div>
 
         <div class="timeline">
             <div class="step"><div class="step-num">1</div><strong>Applications Open</strong><br><small>Late July 2026</small></div>
-            <div class="step"><div class="step-num">2</div><strong>Review Period</strong><br><small>August 2026</small></div>
-            <div class="step"><div class="step-num">3</div><strong>Acceptance</strong><br><small>Late August 2026</small></div>
-            <div class="step"><div class="step-num">4</div><strong>Program Start</strong><br><small>August–October 2026</small></div>
+            <div class="step"><div class="step-num">2</div><strong>Selection Review</strong><br><small>August 2026</small></div>
+            <div class="step"><div class="step-num">3</div><strong>Acceptance</strong><br><small>August 2026</small></div>
+            <div class="step"><div class="step-num">4</div><strong>Program Start</strong><br><small>Late June 2026</small></div>
         </div>
 
         <div style="text-align: center; margin-top: 60px;">
+            <p style="color: var(--wine-red); font-weight: 700; margin-bottom: 15px;">APPLICATION DEADLINE: August 2026</p>
             <a href="https://forms.office.com/r/zReLcwixFD?origin=lprLink" target="_blank" class="btn-main">Apply Now</a>
         </div>
     </section>
 
     <section id="venue">
-        <h2 class="section-title">Institutional Host</h2>
+        <h2 class="section-title">Venue: Monterrey, Mexico</h2>
         <div class="grid" style="grid-template-columns: 1.5fr 1fr;">
             <div>
                 <img src="FIME.png" alt="FIME UANL" style="width: 100%; border-radius: 4px; filter: grayscale(10%);">
             </div>
             <div>
-                <h3>FIME UANL</h3>
-                <p style="font-size: 0.95rem; color: var(--text-light);">
-                    The <strong>Facultad de Ingeniería Mecánica y Eléctrica</strong> at UANL serves as the technical epicenter for robotics in Northern Mexico. Its specialized labs provide the required infrastructure for complex hardware deployment and swarm testing.
+                <h3>Why Monterrey?</h3>
+                <p style="font-size: 0.9rem; color: var(--text-light);">
+                    Monterrey serves as Mexico's premier industrial ecosystem and manufacturing hub. Hosted at <strong>Facultad de Ingeniería Mecánica y Eléctrica</strong>, the venue provides the ideal infrastructure for advanced robotics development and industry networking.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="leadership">
+    <section id="organization">
         <h2 class="section-title">Program Leadership</h2>
         <div class="grid">
             <div class="card">
                 <h3>Program Director</h3>
-                <p><strong>Patricio Samperio Pérez</strong><br>Coordinator, IEEE RAS Student Chapter UANL</p>
+                <p><strong>Patricio Samperio Pérez</strong><br>Coordinator, IEEE RAS Student Chapter Universidad Autónoma de Nuevo León</p>
             </div>
             <div class="card">
                 <h3>Academic Supervisor</h3>
-                <p><strong>Ing. René Guzmán</strong><br>Faculty of Mechanical and Electrical Engineering</p>
+                <p><strong>Ing. René Guzmán</strong><br>Universidad Autónoma de Nuevo León | Facultad de Ingeniería Mecánica y Eléctrica</p>
             </div>
+        </div>
+    </section>
+
+    <section id="support">
+        <h2 class="section-title">Institutional Support</h2>
+        <div class="card" style="border-left: 5px solid var(--deep-purple);">
+            <h3>Expected Support From:</h3>
+            <ul class="req-list">
+                <li>IEEE Robotics and Automation Society Technical Committees (Pending Confirmation).</li>
+                <li>Universidad Autónoma de Nuevo León Research Department.</li>
+            </ul>
         </div>
     </section>
 
     <section id="faq" style="background: #fdfdfd;">
         <h2 class="section-title">FAQ</h2>
         <div class="grid">
-            <div class="card" style="border-top: none; border-left: 3px solid var(--wine-red);">
-                <p><strong>Is prior ROS 2 experience required?</strong><br>Basic knowledge is recommended, but Module 02 provides the necessary foundations.</p>
-            </div>
-            <div class="card" style="border-top: none; border-left: 3px solid var(--wine-red);">
-                <p><strong>Is Ubuntu Linux mandatory?</strong><br>Yes. ROS 2 deployment and DDS communication require a native Linux environment for full compatibility with laboratory hardware.</p>
-            </div>
-            <div class="card" style="border-top: none; border-left: 3px solid var(--wine-red);">
-                <p><strong>Is accommodation provided?</strong><br>No. Participants must arrange their own lodging in Monterrey.</p>
-            </div>
+            <div class="faq-item"><strong>Do participants receive IEEE certification?</strong><p>Yes, an official participation certificate is issued by the IEEE RAS Student Chapter.</p></div>
+            <div class="faq-item"><strong>Is hardware mandatory?</strong><p>Only your laptop is required. Robotic platforms are provided by the lab.</p></div>
+            <div class="faq-item"><strong>Is accommodation included?</strong><p>No, participants must arrange their own lodging in Monterrey.</p></div>
+            <div class="faq-item"><strong>Are international students accepted?</strong><p>Yes, we welcome students and researchers from all countries.</p></div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-nav" style="margin-bottom: 30px;">
-            <a href="#about">About</a>
-            <a href="#syllabus">Program</a>
-            <a href="#apply">Apply</a>
-            <a href="#venue">Venue</a>
+        <div style="margin-bottom: 25px;">
+            <a href="#about" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">WHY ATTEND</a>
+            <a href="#syllabus" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">PROGRAM</a>
+            <a href="#apply" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">APPLY</a>
         </div>
-        <p style="font-size: 0.85rem; letter-spacing: 1px;">ieee.ras.uanl@gmail.com</p>
-        <p style="font-size: 0.7rem; margin-top: 25px; opacity: 0.4; text-transform: uppercase; letter-spacing: 2px;">
+        <p style="font-size: 0.8rem; letter-spacing: 1px;">ieee.ras.uanl@gmail.com</p>
+        <p style="font-size: 0.65rem; margin-top: 20px; opacity: 0.4; text-transform: uppercase; letter-spacing: 2px;">
             IEEE ROBOTICS AND AUTOMATION SOCIETY STUDENT CHAPTER<br>
-            UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN | FIME
+            UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN | FACULTAD DE INGENIERÍA MECÁNICA Y ELÉCTRICA
         </p>
     </footer>
 
     <script>
         function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
-        ScrollReveal().reveal('.card, .step', { delay: 150, distance: '15px', origin: 'bottom', interval: 80 });
+        ScrollReveal().reveal('.card, .step', { delay: 150, distance: '20px', origin: 'bottom', interval: 80 });
     </script>
 </body>
 </html>
