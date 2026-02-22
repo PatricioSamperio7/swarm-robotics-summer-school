@@ -53,7 +53,8 @@
         
         .hero .inst-top { text-transform: uppercase; letter-spacing: 4px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1.5rem; color: var(--cream); }
         .hero h1 { font-weight: 700; font-size: clamp(2rem, 6vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -1px; }
-        .hero .tagline { font-size: 1.1rem; margin-bottom: 1.5rem; color: #eee; font-weight: 400; }
+        .hero .tagline { font-size: 1.1rem; margin-bottom: 1rem; color: #eee; font-weight: 400; }
+        .hero .location-date { font-size: 0.9rem; letter-spacing: 2px; color: #fff; text-transform: uppercase; font-weight: 500; margin-bottom: 2rem; }
         .hero .sub-chapter { font-weight: 600; letter-spacing: 1.5px; font-size: 0.85rem; color: #ccc; text-transform: uppercase; }
 
         .host-block { background: var(--cream); padding: 40px 10%; text-align: center; border-bottom: 1px solid #ddd; }
@@ -102,9 +103,9 @@
 
     <nav>
         <div class="nav-brand">
-            <img src="LOGO%20IEEE.png?v=2" alt="IEEE Logo">
-            <img src="LOGO%20RAS.png?v=2" alt="IEEE RAS Logo">
-            <img src="LOGO%20SB.png?v=2" alt="IEEE SB Logo">
+            <img src="LOGO%20IEEE.png?v=2" alt="IEEE Corporate Logo">
+            <img src="LOGO%20RAS.png?v=2" alt="IEEE Robotics and Automation Society Logo">
+            <img src="LOGO%20SB.png?v=2" alt="IEEE UANL Student Chapter Logo">
         </div>
         <div class="menu-icon" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -120,6 +121,7 @@
         <a href="#certification" onclick="toggleMenu()">Certification</a>
         <a href="#venue" onclick="toggleMenu()">Venue</a>
         <a href="#organization" onclick="toggleMenu()">Program Organization</a>
+        <a href="#faq" onclick="toggleMenu()">FAQ</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
 
@@ -129,6 +131,7 @@
             <p class="inst-top">Universidad Autónoma de Nuevo León</p>
             <h1>Swarm Robotics Summer School 2026</h1>
             <p class="tagline">Design and Implementation of Distributed Robotics Swarms using ROS 2</p>
+            <p class="location-date">Monterrey, Mexico | Summer 2026</p>
             <p class="sub-chapter">IEEE Robotics and Automation Society Student Chapter</p>
         </div>
     </header>
@@ -182,6 +185,8 @@
             <p style="margin-bottom: 1.5rem; color: var(--text-light);">By focusing on the implementation of distributed intelligence, we foster a collaborative environment where innovation is driven by real-world constraints. Participants engage in a rigorous curriculum designed to transform abstract mathematical rules into resilient, collaborative robotic systems capable of navigating the uncertainties of physical environments.</p>
             
             <p style="margin-bottom: 1.5rem; color: var(--text-light); font-weight: 500; font-style: italic; border-left: 3px solid var(--wine-red); padding-left: 1.5rem;">Our mission is to prepare the next generation of robotics engineers to lead the deployment of swarm technologies across industrial and societal sectors. By mastering the coordination of autonomous agents, our participants are equipped to design systems that maximize collaborative efficiency and deliver meaningful real-world impact through distributed intelligence.</p>
+
+            <p style="margin-top: 2rem; color: var(--text-light);">This is a fully in-person intensive laboratory-based program hosted at FIME UANL, focused on hands-on collaborative engineering work.</p>
         </div>
     </section>
 
@@ -242,6 +247,7 @@
                 <ul class="req-list">
                     <li>Deploy a functional multi-robot swarm system.</li>
                     <li>Design scalable ROS 2 distributed architectures.</li>
+                    <li>Final technical presentation before academic committee.</li>
                 </ul>
             </div>
             <div class="card" style="border-top-color: var(--deep-purple);">
@@ -289,7 +295,7 @@
             <div class="card">
                 <h3>Technical Recommendations</h3>
                 <ul class="req-list">
-                    <li><strong>Ubuntu 22.04 LTS recommended:</strong> Provides optimal ROS 2 Humble or Jazzy compatibility for native development.</li>
+                    <li><strong>Ubuntu Linux environment recommended:</strong> for ROS 2 Humble or Jazzy distributions.</li>
                     <li><strong>C++/Python:</strong> Foundational knowledge in OOP is recommended.</li>
                 </ul>
             </div>
@@ -312,7 +318,7 @@
         <h2 class="section-title">Venue: Monterrey, Mexico</h2>
         <div class="grid" style="grid-template-columns: 1.5fr 1fr;">
             <div>
-                <img src="FIME.png" alt="FIME UANL" style="width: 100%; border-radius: 4px; filter: grayscale(10%);">
+                <img src="FIME.png" alt="Facultad de Ingeniería Mecánica y Eléctrica laboratories at Universidad Autónoma de Nuevo León." style="width: 100%; border-radius: 4px; filter: grayscale(10%);">
             </div>
             <div>
                 <h3>Strategic Hub</h3>
@@ -333,6 +339,7 @@
             <div class="card">
                 <h3>Program Leadership</h3>
                 <p><strong>Patricio Samperio Pérez</strong><br>Coordinator, IEEE RAS Student Chapter Universidad Autónoma de Nuevo León</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">IEEE Robotics and Automation Society UANL Student Chapter</p>
             </div>
             <div class="card">
                 <h3>Academic Supervision</h3>
@@ -346,7 +353,7 @@
         <div class="card" style="border-left: 5px solid var(--deep-purple);">
             <h3>Collaborating Entities:</h3>
             <ul class="req-list">
-                <li style="font-weight: 600; color: var(--wine-red);">IEEE RAS Technical Committee endorsement pending confirmation.</li>
+                <li style="font-weight: 600; color: var(--wine-red);">Technical Committee collaboration under development.</li>
                 <li>Universidad Autónoma de Nuevo León.</li>
                 <li>Facultad de Ingeniería Mecánica y Eléctrica.</li>
             </ul>
@@ -382,9 +389,11 @@
 
     <footer>
         <div style="margin-bottom: 25px;">
-            <a href="#about" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">WHY ATTEND</a>
-            <a href="#syllabus" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">PROGRAM</a>
-            <a href="#apply" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">APPLY</a>
+            <a href="#about" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">About</a>
+            <a href="#venue" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">Venue</a>
+            <a href="#organization" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">Organization</a>
+            <a href="#faq" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">FAQ</a>
+            <a href="#contact" style="color: #999; text-decoration: none; margin: 0 10px; font-size: 0.7rem;">Contact</a>
         </div>
         <p style="font-size: 0.8rem; letter-spacing: 1px;">ieee.ras.uanl@gmail.com</p>
         <p style="font-size: 0.65rem; margin-top: 20px; opacity: 0.4; text-transform: uppercase; letter-spacing: 2px;">
