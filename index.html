@@ -6,7 +6,7 @@
     <title>Swarm Robotics Summer School 2026 | IEEE RAS UANL</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
     <style>
         :root {
@@ -18,6 +18,7 @@
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
+        /* Tipografía Unificada para todo el sitio */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         body { background-color: #fff; color: var(--text-dark); line-height: 1.6; }
@@ -41,7 +42,7 @@
         .nav-menu.active { right: 0; }
         .nav-menu a { color: white; text-decoration: none; font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; }
 
-        /* Hero & Institutional Header */
+        /* Hero & Portada con Tipografía Unificada */
         .hero {
             height: 85vh; display: flex; align-items: center; justify-content: center;
             background: url('SWARM.png') center/cover no-repeat; position: relative; color: white; margin-top: 60px;
@@ -49,9 +50,10 @@
         .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(46, 26, 71, 0.88); }
         .hero-content { position: relative; z-index: 2; text-align: center; max-width: 1000px; padding: 20px; }
         
-        .inst-top { text-transform: uppercase; letter-spacing: 4px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1.5rem; color: var(--cream); }
+        .hero .inst-top { text-transform: uppercase; letter-spacing: 4px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1.5rem; color: var(--cream); }
         .hero h1 { font-weight: 700; font-size: clamp(2rem, 6vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -1px; }
-        .hero p.tagline { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; margin-bottom: 2.5rem; color: #ccc; }
+        .hero .tagline { font-size: 1.1rem; margin-bottom: 1.5rem; color: #eee; font-weight: 400; }
+        .hero .sub-chapter { font-weight: 600; letter-spacing: 1.5px; font-size: 0.85rem; color: #ccc; text-transform: uppercase; }
 
         .host-block { background: var(--cream); padding: 40px 10%; text-align: center; border-bottom: 1px solid #ddd; }
         .host-block h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; color: var(--wine-red); margin-bottom: 10px; }
@@ -59,14 +61,13 @@
 
         /* Sections */
         section { padding: 90px 10%; border-bottom: 1px solid #eee; }
-        .section-title { font-weight: 700; font-size: 2.2rem; color: var(--wine-red); margin-bottom: 3.5rem; position: relative; letter-spacing: -0.5px; }
+        .section-title { font-weight: 700; font-size: 2.2rem; color: var(--wine-red); margin-bottom: 3.5rem; position: relative; }
         .section-title::after { content: ''; position: absolute; bottom: -12px; left: 0; width: 60px; height: 4px; background: var(--wine-red); }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .card { padding: 40px; background: #fcfcfc; border-radius: 4px; border-top: 5px solid var(--wine-red); box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
         .card h3 { color: var(--deep-purple); margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Timeline Visual */
         .timeline { display: flex; justify-content: space-between; margin-top: 50px; flex-wrap: wrap; gap: 20px; }
         .step { flex: 1; min-width: 180px; text-align: center; }
         .step-num { width: 45px; height: 45px; background: var(--wine-red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 700; font-size: 1rem; border: 4px solid #fff; box-shadow: 0 0 0 2px var(--wine-red); }
@@ -113,7 +114,7 @@
             <p class="inst-top">Universidad Autónoma de Nuevo León</p>
             <h1>Swarm Robotics Summer School 2026</h1>
             <p class="tagline">Design and Implementation of Distributed Robotics Swarms using ROS 2</p>
-            <p style="font-weight: 500; letter-spacing: 1px; font-size: 0.85rem; color: #eee;">IEEE ROBOTICS AND AUTOMATION SOCIETY STUDENT CHAPTER</p>
+            <p class="sub-chapter">IEEE Robotics and Automation Society Student Chapter</p>
         </div>
     </header>
 
@@ -213,14 +214,14 @@
         </div>
 
         <div class="timeline">
-            <div class="step"><div class="step-num">1</div><strong>Applications Open</strong><br><small>Late July 2026</small></div>
-            <div class="step"><div class="step-num">2</div><strong>Selection Review</strong><br><small>August 2026</small></div>
-            <div class="step"><div class="step-num">3</div><strong>Acceptance</strong><br><small>August 2026</small></div>
+            <div class="step"><div class="step-num">1</div><strong>Applications Open</strong><br><small>March 2026</small></div>
+            <div class="step"><div class="step-num">2</div><strong>Selection Process</strong><br><small>May 2026</small></div>
+            <div class="step"><div class="step-num">3</div><strong>Acceptance</strong><br><small>May 2026</small></div>
             <div class="step"><div class="step-num">4</div><strong>Program Start</strong><br><small>Late June 2026</small></div>
         </div>
 
         <div style="text-align: center; margin-top: 60px;">
-            <p style="color: var(--wine-red); font-weight: 700; margin-bottom: 15px;">APPLICATION DEADLINE: August 2026</p>
+            <p style="color: var(--wine-red); font-weight: 700; margin-bottom: 15px;">APPLICATION DEADLINE: May 2026</p>
             <a href="https://forms.office.com/r/zReLcwixFD?origin=lprLink" target="_blank" class="btn-main">Apply Now</a>
         </div>
     </section>
@@ -260,7 +261,8 @@
             <h3>Expected Support From:</h3>
             <ul class="req-list">
                 <li>IEEE Robotics and Automation Society Technical Committees (Pending Confirmation).</li>
-                <li>Universidad Autónoma de Nuevo León Research Department.</li>
+                <li>Universidad Autónoma de Nuevo León.</li>
+                <li>Facultad de Ingeniería Mecánica y Eléctrica.</li>
             </ul>
         </div>
     </section>
